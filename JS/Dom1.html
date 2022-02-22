@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+    <style>
+        div{
+             box-shadow:0 0 10px black;
+            width: 500px;
+            text-align: center;
+            padding: 50px;
+            margin: 50px auto;
+        }
+    </style>
+    <script>
+        function fn() {
+        //    console.log(document)
+       var h2Ref=  document.getElementById('dom')
+        var divRef= document.getElementById('d1')
+        var pRef = document.getElementById('p1')
+        var buttonRef = document.getElementById('btn')
+       
+        // get the reference of html element
+       h2Ref.innerText = "Hello, Javascript !!! "
+       h2Ref.style.color = "red"
+
+       divRef.style.backgroundColor = "green"
+       pRef.style.color="white"
+       buttonRef.innerText = "Content Updated"
+       buttonRef.style.padding = 10 
+       buttonRef.style.backgroundColor="orange"
+       buttonRef.style.color="white"
+       buttonRef.style.border="none"
+       buttonRef.style.borderRadius = "10px"
+        }
+    </script>
+</head>
+<body>
+       <div id="d1">
+           <h2 id="dom">Welcome to HTML</h2>
+           <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsam est explicabo culpa eaque ratione inventore cupiditate, officiis velit laudantium illum dolorem voluptatum atque perspiciatis ad cum a aspernatur quisquam.</p>
+           <button id="btn" onclick="fn()">Update Content</button>
+        </div>
+</body>
+</html>
