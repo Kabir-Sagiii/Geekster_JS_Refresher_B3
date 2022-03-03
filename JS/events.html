@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fnChange(e) {
+        console.log(e.target);
+        var divRef = document.querySelector("div");
+        divRef.style.backgroundColor = "red";
+        e.target.innerText = "Changed BG Color";
+      }
+      function fnChangeColor(e) {
+        e.target.style.backgroundColor = "orange";
+      }
+      function fnChangeColorBack(e) {
+        e.target.style.backgroundColor = "red";
+      }
+    </script>
+    <style>
+      div {
+        width: 500px;
+        border: 2px solid;
+        height: 300px;
+        padding: 30px;
+      }
+      button {
+        margin-top: 30px;
+        background-color: coral;
+        border: none;
+        padding: 10px;
+        color: white;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2>This is JS Code</h2>
+      <input
+        type="text"
+        placeholder="enter text"
+        onmouseenter="fnChangeColor(event)"
+        onmouseleave="fnChangeColorBack(event)"
+      />
+    </div>
+    <button onclick="fnChange(event)">Change Color</button>
+  </body>
+</html>

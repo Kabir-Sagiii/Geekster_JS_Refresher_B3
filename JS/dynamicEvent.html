@@ -1,0 +1,28 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fnAddEvent() {
+        var btnRef1 = document.querySelector("#btn1");
+        btnRef1.addEventListener("click", btn);
+      }
+
+      function btn() {
+        alert("working");
+      }
+
+      function removeEvent() {
+        var btnRef1 = document.querySelector("#btn1");
+        btnRef1.removeEventListener("click", btn);
+      }
+    </script>
+  </head>
+  <body>
+    <button id="btn1">Profile</button>
+    <button onclick="fnAddEvent()">Add Event</button>
+    <button onclick="removeEvent()">Remove Event</button>
+  </body>
+</html>

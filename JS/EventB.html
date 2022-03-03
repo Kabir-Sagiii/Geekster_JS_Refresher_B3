@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      #div1 {
+        width: 500px;
+        border: 2px solid;
+        height: 300px;
+        padding: 30px;
+      }
+    </style>
+    <script>
+      function changeColor(e) {
+        alert("working");
+        if (e.target.id === "btn1") {
+          document.querySelector("h2").style.color = "red";
+        } else if (e.target.id === "btn2") {
+          document.querySelector("h2").style.color = "blue";
+        } else {
+          document.querySelector("h2").style.color = "green";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="div1">
+      <h2>Change Color</h2>
+      <div onclick="changeColor(event)">Child Div</div>
+      <button id="btn1">Red</button>
+      <button id="btn2">Blue</button>
+      <button>Green</button>
+    </div>
+  </body>
+</html>
